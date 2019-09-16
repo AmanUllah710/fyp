@@ -1,0 +1,45 @@
+.mid {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  top: 30%;
+  bottom: 20%;
+}
+
+.mid1 {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  top: 20%;
+  bottom: 20%;
+  width: auto;
+}
+
+.about-item:hover {
+  background-color: #f4c613;
+}
+
+.about-item:hover i,
+.about-item:hover p {
+  color: #fff;
+}
+
+.about-item:hover hr {
+  background-color: #fff;
+}
+
+.about-item:hover hr {
+  background-color: #fff;
+}
+
+/* .about-item:hover i {
+  transform: translateY(-20px);
+} */
+
+/* Smooth transition */
+.about-item,
+.about-item i,
+.about-item hr {
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}

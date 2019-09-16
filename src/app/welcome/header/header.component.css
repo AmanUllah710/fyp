@@ -1,0 +1,30 @@
+.header {
+  background-color: gray;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+.name {
+  font-style: italic;
+  color: #f4c613;
+}
+
+.name h2 {
+  font-size: 30px;
+}
+
+.login {
+  padding-left: 10px;
+}
+
+#btn {
+  position: relative;
+  float: right;
+}
+
+
+
+
+

@@ -1,0 +1,38 @@
+.form {
+  width: 50%;
+  padding-top: 50px;
+  background-color: white;
+}
+
+.rs p{
+  padding-top: 8px;
+  margin-left: -20px;
+}
+
+.rs1 p{
+  padding-top: 8px;
+}
+
+#FormControlInput1 {
+  width: 47%;
+}
+
+#FormControlInput3 {
+  width: 100%;
+}
+
+#btn button {
+  background-color: black;
+}
+
+#btn button:hover {
+  width: 70px;
+  height: 40px;
+  background-color: yellow;
+}
+
+#add {
+  padding-left: 18px;
+  padding-right: 18px;
+  margin-right: 20px;
+}
