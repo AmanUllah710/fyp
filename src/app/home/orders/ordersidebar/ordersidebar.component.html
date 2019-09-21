@@ -1,7 +1,6 @@
 <div class="sidebar" >
-    <a routerLink="/orders" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">New Orders</a>
+    <a matBadge="7" matBadgePosition="after" matBadgeColor="primary"  routerLink="/orders" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">New Orders</a>
     <a routerLink="/pendingorders" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Pending Orders</a>
     <a routerLink="/ordershistory" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Orders History</a>
 </div>
-
 <router-outlet></router-outlet>

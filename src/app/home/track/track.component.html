@@ -1,5 +1,57 @@
 <app-sidenav></app-sidenav>
-<br>
-<p>
-  track works!
-</p>
+
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="order_id">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.order_id}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="distributor_name">
+      <mat-header-cell *matHeaderCellDef> Distributor Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.distributor_name}} </mat-cell>
+    </ng-container>
+
+    <!-- Date Column -->
+    <ng-container matColumnDef="delivery_date">
+      <mat-header-cell *matHeaderCellDef> Delivery Date </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.delivery_date}} </mat-cell>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="track">
+      <mat-header-cell *matHeaderCellDef> View Track </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <button data-toggle="modal" data-target="#Modal" mat-raised-button color='accent' routerLink='/trackmedicine'>Track</button></mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">Confirm Supply(Id# 248637)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <h3>Distributor</h3>
+
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
