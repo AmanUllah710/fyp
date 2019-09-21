@@ -1,0 +1,94 @@
+    <div class="row heading">
+      <div class="col-md-6">
+        <h3 fxLayoutAlign="center start">Product Detail</h3>
+      </div>
+      <div class="col-md-6">
+        <h3 fxLayoutAlign="center start">Enter Distributor Details</h3>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-3">
+              <h5 id="qty">Quantity:</h5>
+              <h5 id="tp">Total Price:</h5>
+            </div>
+            <div class="col-md-3 date">
+              <!-- <h5 id="quantity">{{getTotalQuantity()}}</h5> -->
+              <input type="text" class="form-control" id="FormControlInput1" value="12" required>
+              <!-- <h5>&#8360;. {{getTotalCost()}}</h5> -->
+              <div class="row">
+                <div class="col-md-1 rs">
+                  <h4>&#8360;.</h4>
+                </div>
+                <div class="col-md-2">
+                  <input type="text" class="form-control" id="FormControlInput2" value="12" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 date">
+              <!-- <label for="FormControlInput6">Delivery date</label> -->
+              <h5>Delivery Date: </h5>
+            </div>
+            <div class="col-md-5">
+              <input type="date" class="form-control abc1" id="FormControlInput3" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 date">
+              <!-- <label for="FormControlInput6">Delivery date</label> -->
+              <h5>Recieving Date: </h5>
+            </div>
+            <div class="col-md-5">
+              <input type="date" class="form-control abc1" id="FormControlInput4" required>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-5 col-lg-6">
+          <div class="row">
+            <div class="col-md-4 city">
+              <h5>Select City</h5>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field>
+                <mat-label>Choose City</mat-label>
+                <mat-select [formControl]="cityControl" required>
+                  <mat-option>--</mat-option>
+                  <mat-option *ngFor="let city of cities" [value]="city">
+                    {{city.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="cityControl.hasError('required')">Please choose a city</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 dist">
+              <h5>Select Distributor</h5>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field>
+                <mat-label>Choose Distributor</mat-label>
+                <mat-select [formControl]="distributorControl" required>
+                  <mat-option>--</mat-option>
+                  <mat-option *ngFor="let distributor of distributors" [value]="distributor">
+                    {{distributor.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="distributorControl.hasError('required')">Please choose a distributor</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <app-detaildialog></app-detaildialog>
+        </div>
+      </div>
+    </div>
+
+    <!-- <button type="button" class="btn btn-accent btn" data-toggle="modal" data-target="#Modal">
+      Enter Distributor Detail
+    </button> -->
+

@@ -1,19 +1,54 @@
 <app-sidenav></app-sidenav>
-<div class="row card">
-  <mat-card>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-    Beatae reprehenderit, quibusdam quo nisi incidunt veritatis?
-    Veritatis, aliquam vel totam provident quo officia praesentium
-    nostrum voluptates, ipsa minima illo reiciendis amet.
+<div class="container1 mat-elevation-z8">
+  <table mat-table [dataSource]="transactions" class="mat-elevation-z8">
+    <!-- Item Column -->
+    <ng-container matColumnDef="item">
+      <th mat-header-cell *matHeaderCellDef> Item </th>
+      <td mat-cell *matCellDef="let transaction"> {{transaction.item}} </td>
+      <td mat-footer-cell *matFooterCellDef> Total </td>
+    </ng-container>
 
-  </mat-card>
-</div>
-<div class="row card">
-  <mat-card>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-    Beatae reprehenderit, quibusdam quo nisi incidunt veritatis?
-    Veritatis, aliquam vel totam provident quo officia praesentium
-    nostrum voluptates, ipsa minima illo reiciendis amet.
+    <!-- Quantity Column -->
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef> Quantity </th>
+      <td mat-cell *matCellDef="let transaction"> {{transaction.quantity}} </td>
+      <td mat-footer-cell *matFooterCellDef> {{getTotalQuantity()}} </td>
+    </ng-container>
 
-  </mat-card>
+    <!-- Cost Column -->
+    <ng-container matColumnDef="cost">
+      <th mat-header-cell *matHeaderCellDef> Cost </th>
+      <td mat-cell *matCellDef="let transaction"> &#8360;. {{transaction.cost}} </td>
+      <td mat-footer-cell *matFooterCellDef> &#8360;. {{getTotalCost()}} </td>
+    </ng-container>
+
+
+    <!-- Item Description Column -->
+    <ng-container matColumnDef="item-description">
+      <th mat-header-cell *matHeaderCellDef> Name of the items for supply </th>
+    </ng-container>
+
+    <!-- Quantity Description Column -->
+    <ng-container matColumnDef="quantity-description">
+      <th mat-header-cell *matHeaderCellDef> Quantity of medicine </th>
+    </ng-container>
+
+    <!-- Cost Description Column -->
+    <ng-container matColumnDef="cost-description">
+      <th mat-header-cell *matHeaderCellDef> Cost of the item in Rupee </th>
+    </ng-container>
+
+
+    <!-- The table will render two header rows, one data row per data object, and two footer rows. -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" class="first-header-row">
+    </tr>
+    <tr mat-header-row *matHeaderRowDef="['item-description', 'quantity-description', 'cost-description']"
+      class="second-header-row">
+    </tr>
+
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true" class="first-footer-row"></tr>
+  </table>
 </div>
+<app-supplyfooter></app-supplyfooter>

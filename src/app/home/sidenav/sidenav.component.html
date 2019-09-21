@@ -21,26 +21,45 @@
 
 <div *ngIf="!shouldRun">Please open on Stackblitz to see result</div> -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light header">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
     aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="/home">Home</a>
+  <a class="navbar-brand" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="/addmedicine">Add Medicine<span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/addmedicine" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Add Medicine<span class="sr-only">(current)</span></a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="/supplymedicine">Supply Medicine</a>
+      </li> -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" routerLink="/supplymedicine" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          Supply Medicine
+        </a>
+        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/supplymedicine">Pending Supplies</a>
+          <a class="dropdown-item" routerLink="/supplyhistory">Supply History</a>
+        </div> -->
+      </li>
+      <!-- <li class="nav-item">
+        <a matBadge="7" matBadgePosition="after" matBadgeColor="primary" class="nav-link" routerLink="/orders">Orders</a>
+      </li> -->
+      <li class="nav-item dropdown">
+        <a matBadge="7" matBadgePosition="after" matBadgeColor="primary" class="nav-link" routerLink="/orders" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          Orders
+        </a>
+        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/home">New Orders</a>
+          <a class="dropdown-item" routerLink="/home">Pending Orders</a>
+          <a class="dropdown-item" routerLink="/home">Orders History</a>
+        </div> -->
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/supplymedicine">Supply Medicine</a>
-      </li>
-      <li class="nav-item">
-        <a matBadge="7" matBadgePosition="after" matBadgeColor="primary" class="nav-link" href="/orders">Orders</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/trackmedicine">Track</a>
+        <a class="nav-link" routerLink="/trackmedicine" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Track</a>
       </li>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0">
@@ -65,7 +84,6 @@
         <fa-icon class="icon" [icon]="faSignOutAlt"></fa-icon>
         Log out
       </button>
-
     </mat-menu>
 
   </div>

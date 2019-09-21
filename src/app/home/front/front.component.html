@@ -1,4 +1,8 @@
 <app-sidenav></app-sidenav>
+<br>
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Medicine">
+</mat-form-field>
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
 
@@ -53,17 +57,7 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;">
     </tr>
   </table>
-
-  <div class="row">
-    <div class="col-md-8">
-      <mat-form-field>
-        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Medicine">
-      </mat-form-field>
-    </div>
-    <div class="col-md-4">
-      <mat-paginator [pageSizeOptions]="[5, 15, 30, 60, 90, 120, 200]"></mat-paginator>
-    </div>
-  </div>
+    <mat-paginator [pageSizeOptions]="[5, 15, 30, 60, 90, 120, 200]"></mat-paginator>
 </div>
 
 <app-homefooter></app-homefooter>

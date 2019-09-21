@@ -15,7 +15,8 @@ import {MatFormFieldModule,
         MatRippleModule,
         MatStepperModule,
         MatBadgeModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatDialogModule,
         } from '@angular/material';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'
@@ -38,7 +39,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms'
             ReactiveFormsModule,
             FormsModule,
             MatBadgeModule,
-            MatPaginatorModule
+            MatPaginatorModule,
+            MatDialogModule
            ],
   exports: [MatFormFieldModule,
             MatInputModule,
@@ -57,7 +59,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms'
             ReactiveFormsModule,
             FormsModule,
             MatBadgeModule,
-            MatPaginatorModule
+            MatPaginatorModule,
+            MatDialogModule
   ]
 })
 

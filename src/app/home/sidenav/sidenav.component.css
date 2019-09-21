@@ -8,6 +8,12 @@
   right: 0;
 }
 
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 .example-is-mobile .example-toolbar {
   position: fixed;
   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
@@ -34,4 +40,13 @@ h1.example-app-name {
   padding-right: 10px;
 }
 
+a.active {
+  background-color: rgb(194, 186, 186);
+  color: white;
+}
 
+/* Links on mouse-over */
+a:hover {
+  background-color: rgb(194, 186, 186);
+  color: white;
+}

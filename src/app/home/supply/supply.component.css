@@ -1,4 +1,73 @@
-.card {
-  height: 44.5vh;
-  width: auto;
+.container1 {
+  height: 370px auto;
+  max-height: 370px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  margin-right: 0;
+}
+
+.first-header-row th {
+  border-bottom: none;
+}
+
+.second-header-row {
+  font-style: italic;
+}
+
+.first-footer-row {
+  font-weight: bold;
+}
+
+.second-footer-row td {
+  color: #900000;
+}
+
+.date {
+  padding-bottom: 5px;
+}
+
+.date h5 {
+  padding-top: 3px;
+}
+
+.footer {
+  height: 180px auto;
+  max-height: 180px;
+  overflow: auto;
+  width: 100%;
+}
+
+.heading {
+  margin-right: 0;
+}
+
+#FormControlInput1 {
+  margin-bottom: 8px;
+  width: 200px;
+}
+
+#FormControlInput2 {
+  height: 32px;
+  width: 200px;
+  margin-left: 5px;
+}
+
+.abc {
+  height: 32px;
+  margin-left: 35px;
+}
+
+#qty {
+  padding-top: 2px;
+}
+
+#tp {
+  padding-top: 6px;
+}
+
+#quantity {
+  margin-left: 30px;
 }

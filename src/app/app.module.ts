@@ -24,6 +24,13 @@ import { SupplyComponent } from './home/supply/supply.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { OrdersComponent } from './home/orders/orders.component';
 import { HomefooterComponent } from './home/front/homefooter/homefooter.component';
+import { SupplyfooterComponent } from './home/supply/supplyfooter/supplyfooter.component';
+import { SupplyhistoryComponent } from './home/supply/supplyhistory/supplyhistory.component';
+import { NewordersComponent } from './home/orders/neworders/neworders.component';
+import { PendingordersComponent } from './home/orders/pendingorders/pendingorders.component';
+import { OrdershistoryComponent } from './home/orders/ordershistory/ordershistory.component';
+import { DetaildialogComponent } from './home/supply/detaildialog/detaildialog.component';
+import { OrdersidebarComponent } from './home/orders/ordersidebar/ordersidebar.component';
 
 
 @NgModule({
@@ -41,6 +48,13 @@ import { HomefooterComponent } from './home/front/homefooter/homefooter.componen
     SupplyComponent,
     OrdersComponent,
     HomefooterComponent,
+    SupplyfooterComponent,
+    SupplyhistoryComponent,
+    NewordersComponent,
+    PendingordersComponent,
+    OrdershistoryComponent,
+    DetaildialogComponent,
+    OrdersidebarComponent,
   ],
   imports: [
     BrowserModule,
